@@ -1,0 +1,240 @@
+.abonement-tabs {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 80px;
+  background-color: $color-ghost-white;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 35px;
+  }
+}
+
+.abonement-tabs__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.abonement-tabs__inner > h2 {
+  @include font-title();
+  margin: 0;
+  margin-bottom: 23px;
+  padding: 0;
+
+  @include vp-1199 {
+    margin-bottom: 17px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 11px;
+  }
+}
+
+.abonement-tabs__content {
+  align-self: stretch;
+  z-index: 1;
+}
+
+.abonement-tabs__controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  position: relative;
+  max-width: 90%;
+  margin: 0;
+  margin-bottom: 37px;
+  padding: 0;
+  list-style: none;
+
+  &::after {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: rgba($color-grey, 0.2);
+  }
+
+  @include vp-1199 {
+    margin-bottom: 43px;
+  }
+
+  @include vp-767 {
+    max-width: 290px;
+    margin-bottom: 32px;
+  }
+}
+
+.abonement-tabs__controls[data-nojs="no-js"] {
+  display: none;
+}
+
+.abonement-tabs__controls[data-height="is-high"] {
+  &::after {
+    content: none;
+  }
+}
+
+.abonement-tabs__controls li {
+  margin-right: 46px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include vp-1199 {
+    margin-right: 54px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  @include vp-767 {
+    margin-right: 45px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.abonement-tabs__button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  font-size: $fz-super-small;
+  line-height: $lh-past-modarate;
+  color: rgba($color-default-black, 0.5);
+  border: none;
+  background-color: transparent;
+  user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: rgba($color-default-black, 1);
+  }
+
+  &:active {
+    color: rgba($color-default-black, 0.3);
+  }
+
+  @include vp-1199 {
+    padding-bottom: 16px;
+    font-size: $fz-small;
+    line-height: $lh-pre-modarate;
+  }
+
+  @include vp-767 {
+    font-size: $fz-default;
+    line-height: $lh-normal;
+  }
+}
+
+.abonement-tabs__panel {
+  display: none;
+}
+
+.abonement-tabs__content[data-nojs="no-js"] .abonement-tabs__panel {
+  display: block;
+}
+
+.abonement-tabs__panel ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  margin-right: -40px;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-content: center;
+    justify-content: stretch;
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+.abonement-tabs__panel li {
+  flex: 1 1 24%;
+  max-width: 30%;
+  margin-right: 40px;
+  margin-bottom: 40px;
+
+  @include vp-1199 {
+    display: block;
+    min-width: 442px;
+    max-width: 442px;
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    flex: 1 1 100%;
+    min-width: 290px;
+    max-width: 442px;
+    margin-bottom: 35px;
+  }
+}
+
+.abonement-tabs__panel--active {
+  display: block;
+}
+
+.abonement-tabs__button--active {
+  position: relative;
+  cursor: auto;
+  color: rgba($color-default-black, 1);
+
+  &::after {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: $color-crimson;
+  }
+}
+
+.abonement-tabs__decor {
+  position: absolute;
+  transform: rotate(0) translateX(1px);
+  bottom: -148px;
+  right: 0;
+
+  @include vp-1199 {
+    bottom: -125px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.abonement-tabs__decor img {
+  display: block;
+  width: 287px;
+  height: 494px;
+
+  @include vp-1199 {
+    width: 347px;
+    height: 444px;
+  }
+}

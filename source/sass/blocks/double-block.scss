@@ -1,0 +1,20 @@
+.double-block {
+  display: flex;
+  background-color: $color-default-black;
+  border-top: 1px solid $color-light-slate-gray;
+
+  @include vp-1199 {
+    flex-direction: column;
+    border: none;
+    background-color: $color-default-white;
+  }
+}
+
+.double-block__registration,
+.double-block__contacts {
+  flex: 1 1 50%;
+
+  @include vp-1199 {
+    flex: 1 1 100%;
+  }
+}

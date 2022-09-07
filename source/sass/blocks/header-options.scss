@@ -1,0 +1,45 @@
+.header-options {
+  margin: 0;
+  padding: 0;
+  padding-top: 25px;
+  list-style: none;
+  transform: translateX(-1px);
+
+
+  @include vp-1199 {
+    padding-top: 0;
+    transform: translateY(-15px);
+  }
+
+  @include vp-767 {
+    max-height: 80px;
+    overflow: hidden;
+    overflow-y: auto;
+    transform: translateY(5px);
+  }
+}
+
+.header-options ul {
+  min-width: 134px;
+  margin: 0;
+  padding: 0;
+  padding-top: 13px;
+  list-style: none;
+
+  @include vp-1199 {
+    min-width: 113px;
+    padding-top: 2px;
+    margin: 0;
+  }
+
+  @include vp-767 {
+    padding-top: 0;
+  }
+}
+
+.header-options li {
+  font-size: $fz-super-little;
+  line-height: $lh-super-small;
+  color: $color-default-white;
+  text-align: right;
+}

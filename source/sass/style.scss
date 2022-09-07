@@ -3,7 +3,7 @@
 
 @import "vendor/normalize";
 // Swiper 7.4.1
-// @import "vendor/swiper";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -18,8 +18,29 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
-@import "blocks/modal";
+@import "blocks/main-header";
+@import "blocks/header-logo";
+@import "blocks/header-contacts";
+@import "blocks/header-content";
+@import "blocks/header-options";
+@import "blocks/header-poster";
+@import "blocks/header-social";
+@import "blocks/intro";
+@import "blocks/media";
+@import "blocks/abonement-tabs";
+@import "blocks/abonement-card";
+@import "blocks/events";
+@import "blocks/coaches";
+@import "blocks/features";
+@import "blocks/stocks";
+@import "blocks/feedback";
+@import "blocks/double-block";
+@import "blocks/registration";
+@import "blocks/contacts";
+@import "blocks/main-footer";
+@import "blocks/footer-navigation";
+@import "blocks/footer-social";
+
 
 // ---------------------------------
 
