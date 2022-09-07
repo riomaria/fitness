@@ -1315,16 +1315,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-image: url("../../img/PP/mobile.jpg");
 }
 
 body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
-  opacity: 0.5;
 }
 
 a {
@@ -3975,18 +3971,6 @@ button,
     color: $color-default-white;
   }
 } */
-
-@media (min-width: 768px) {
-  html {
-    background-image: url("../../img/PP/tablet.jpg");
-  }
-}
-
-@media (min-width: 1024px) {
-  html {
-    background-image: url("../../img/PP/desk.jpg");
-  }
-}
 
 @media (max-width: 1199px) {
   .container {
