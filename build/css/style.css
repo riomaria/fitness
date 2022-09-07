@@ -1315,12 +1315,16 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-image: url("../../img/PP/mobile.jpg");
 }
 
 body {
   width: 100%;
   height: 100%;
   background-color: #ffffff;
+  opacity: 0.5;
 }
 
 a {
@@ -2117,6 +2121,7 @@ button,
   position: relative;
   max-width: 90%;
   margin: 0;
+  margin-right: -46px;
   margin-bottom: 37px;
   padding: 0;
   list-style: none;
@@ -2126,7 +2131,7 @@ button,
   position: absolute;
   bottom: 2px;
   left: 0;
-  width: 100%;
+  width: 88.5%;
   height: 2px;
   content: "";
   background-color: rgba(120, 120, 120, 0.2);
@@ -2142,10 +2147,6 @@ button,
 
 .abonement-tabs__controls li {
   margin-right: 46px;
-}
-
-.abonement-tabs__controls li:last-child {
-  margin-right: 0;
 }
 
 .abonement-tabs__button {
@@ -3975,6 +3976,18 @@ button,
   }
 } */
 
+@media (min-width: 768px) {
+  html {
+    background-image: url("../../img/PP/tablet.jpg");
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    background-image: url("../../img/PP/desk.jpg");
+  }
+}
+
 @media (max-width: 1199px) {
   .container {
     padding: 0 45px;
@@ -4218,15 +4231,16 @@ button,
   }
 
   .abonement-tabs__controls {
+    margin-right: -54px;
     margin-bottom: 43px;
+  }
+
+  .abonement-tabs__controls::after {
+    width: 86%;
   }
 
   .abonement-tabs__controls li {
     margin-right: 54px;
-  }
-
-  .abonement-tabs__controls li:last-child {
-    margin-right: 0;
   }
 
   .abonement-tabs__button {
@@ -5013,7 +5027,12 @@ button,
 
   .abonement-tabs__controls {
     max-width: 290px;
+    margin-right: 0;
     margin-bottom: 32px;
+  }
+
+  .abonement-tabs__controls::after {
+    width: 100%;
   }
 
   .abonement-tabs__controls li {
