@@ -68,6 +68,10 @@
   text-decoration: none;
 }
 
+.contacts__item {
+  flex: 1 1 50%;
+}
+
 .contacts__list dt {
   margin: 0;
   margin-bottom: 3px;
@@ -121,7 +125,7 @@
   }
 }
 
-.contacts__list--left {
+.contacts__list--main {
   position: relative;
   padding-left: 4px;
 

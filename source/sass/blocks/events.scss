@@ -9,6 +9,8 @@
 
   @include vp-767 {
     padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 35px;
   }
 }
@@ -16,8 +18,19 @@
 .events__inner {
   display: flex;
   flex-wrap: wrap;
+  width: 100%;
+  min-width: 250px;
+  max-width: 1272px;
+  margin: 0 auto;
+  padding: 0 56px;
+
+  @include vp-1199 {
+    padding: 0 45px;
+  }
+
 
   @include vp-767 {
+    padding: 0;
     justify-content: center;
     background-color: $color-torch-red;
   }
@@ -43,7 +56,8 @@
   }
 
   @include vp-767 {
-    flex: 0 1 30%;
+    flex: 0 1 40%;
+    max-width: 500px;
     min-width: 290px;
     padding-left: 44px;
     padding-right: 44px;
@@ -246,8 +260,8 @@
 
   @include vp-767 {
     align-self: stretch;
-    flex: 1 1 30%;
-    min-width: 250px;
+    flex: 1 1 35%;
+    min-width: 270px;
     min-height: 292px;
   }
 }

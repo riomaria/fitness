@@ -44,9 +44,28 @@
           </ul>
           <div class="main-header__poster header-poster">
             <picture>
-              <source type="image/webp" srcset="./img/hero/hero-desk.webp 1x, ./img/hero/hero@2x.webp 2x">
-              <!-- desktop: 1x - 500px; 2x - 1000px -->
-              <img src="./img/hero/hero-desk.jpg" srcset="./img/hero/hero@2x.jpg 2x" width="500" height="556" loading="lazy" alt="Сергей Архипов - лучший спортсмен прошлого месяца.">
+              <source type="image/webp" srcset="
+                ./img/hero/hero-tablet.webp 324w,
+                ./img/hero/hero-tablet@2x.webp 648w,
+                ./img/hero/hero-desk.webp 500w,
+                ./img/hero/hero-desk@2x.webp 1000w
+              " sizes="
+                (min-width: 1200px) 500px,
+                ((min-width: 1200px) and (min-resolution: 2dppx)) 1000px,
+                (min-width: 768px) 324px,
+                ((min-width: 768px) and (min-resolution: 2dppx)) 648px">
+              <!-- desktop: 1x - 500px; 2x - 1000px; tablet: 1x - 324px; 2x - 648px -->
+              <img srcset="
+                ./img/hero/hero-tablet.jpg 324w,
+                ./img/hero/hero-tablet@2x.jpg 648w,
+                ./img/hero/hero-desk.jpg 500w,
+                ./img/hero/hero-desk@2x.jpg 1000w
+              " sizes="
+                (min-width: 1200px) 500px,
+                ((min-width: 1200px) and (min-resolution: 2dppx)) 1000px,
+                (min-width: 768px) 324px,
+                ((min-width: 768px) and (min-resolution: 2dppx)) 648px
+              " src="./img/hero/hero-desk.jpg" width="500" height="556" loading="lazy" alt="Сергей Архипов - лучший спортсмен прошлого месяца.">
             </picture>
           </div>
           <div class="main-header__social header-social">
@@ -91,9 +110,20 @@
               <div class="media__inner">
                 <div class="media__photo">
                   <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/intro/photo-mobile.webp 1x, ./img/intro/photo-mobile@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1199px)" srcset="./img/intro/photo-tablet.webp 1x, ./img/intro/photo-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="./img/intro/photo-desk.webp 1x, ./img/intro/photo-desk@2x.webp 2x">
+                    <source type="image/webp" srcset="
+                      ./img/intro/photo-mobile.webp 320w,
+                      ./img/intro/photo-mobile@2x.webp 640w,
+                      ./img/intro/photo-tablet.webp 678w,
+                      ./img/intro/photo-tablet@2x.webp 1356w,
+                      ./img/intro/photo-desk.webp 660w,
+                      ./img/intro/photo-desk@2x.webp 1320w
+                    " sizes="
+                      (min-width: 1200px) 660px,
+                      ((min-width: 1200px) and (min-resolution: 2dppx)) 1320px,
+                      (min-width: 768px) 678px,
+                      ((min-width: 768px) and (min-resolution: 2dppx)) 1356px,
+                      (max-width: 767px) 320px,
+                      ((max-width: 767px) and (min-resolution: 2dppx)) 640px">
                     <!-- mobile: 1x - 320px; 2x - 640px; tablet: 1x - 678px; 2x - 1356px  desktop: 1x - 660px; 2x - 1320px  -->
                     <img srcset="
                       ./img/intro/photo-mobile.jpg 320w,
@@ -116,8 +146,16 @@
                   <div class="media__wrapper">
                     <a href="https://www.youtube.com/watch?v=9TZXsZItgdw" target="_blank" rel="noopener">
                       <picture>
-                        <source type="image/webp" media="(max-width: 767px)" srcset="./img/intro/video-mobile.webp 1x, ./img/intro/video-mobile@2x.webp 2x">
-                        <source type="image/webp" srcset="./img/intro/video-desk.webp 1x, ./img/intro/video-desk@2x.webp 2x">
+                        <source type="image/webp" srcset="
+                          ./img/intro/video-mobile.webp 320w,
+                          ./img/intro/video-mobile@2x.webp 640w,
+                          ./img/intro/video-desk.webp 364w,
+                          ./img/intro/video-desk@2x.webp 728w
+                        " sizes="
+                          (min-width: 768px) 364px,
+                          ((min-width: 768px) and (min-resolution: 2dppx)) 728px,
+                          (max-width: 767px) 320px,
+                          ((max-width: 767px) and (min-resolution: 2dppx)) 640px">
                         <!-- mobile: 1x - 320px; 2x - 640px; tablet: 1x - 364px; 2x - 728px -->
                         <img srcset="
                           ./img/intro/video-mobile.jpg 320w,
@@ -133,7 +171,7 @@
                       </picture>
                     </a>
                     <button type="button">
-                      <svg width="13" height="15">
+                      <svg width="13" height="15" aria-hidden="true" focusable="false">
                         <use xlink:href="./img/sprite_auto.svg#icon-play"></use>
                       </svg>
                     </button>
@@ -291,8 +329,16 @@
           </div>
           <div class="abonement-tabs__decor">
             <picture>
-              <source type="image/webp" media="(max-width: 1199px)" srcset="./img/tabs/decor-tablet.webp 1x, ./img/tabs/decor-tablet@2x.webp 2x">
-              <source type="image/webp" srcset="./img/tabs/decor.webp 1x, ./img/tabs/decor@2x.webp 2x">
+              <source type="image/webp" srcset="
+                ./img/tabs/decor-tablet.webp 347w,
+                ./img/tabs/decor-tablet@2x.webp 694w,
+                ./img/tabs/decor.webp 287w,
+                ./img/tabs/decor@2x.webp 574w
+              " sizes="
+                (min-width: 1200px) 287px,
+                ((min-width: 1200px) and (min-resolution: 2dppx)) 574px,
+                (min-width: 768px) 347px,
+                ((min-width: 768px) and (min-resolution: 2dppx)) 694px">
               <!-- tablet: 1x - 347px; 2x - 694px  desktop: 1x - 287px; 2x - 574px  -->
               <img srcset="
                 ./img/tabs/decor-tablet.png 347w,
@@ -309,42 +355,48 @@
           </div>
         </section>
         <section class="events">
-          <div class="container">
-            <div class="events__inner">
-              <div class="events__info">
-                <h2>Super Games</h2>
-                <p>Ежегодные соревнования по&nbsp;CrossFit</p>
-                <dl>
-                  <div>
-                    <dt>Дата</dt>
-                    <dd>7 <span>марта 2019</span>
-                    </dd>
-                  </div>
-                  <div>
-                    <dt>Время</dt>
-                    <dd>12:00</dd>
-                  </div>
-                </dl>
-                <a href="#" target="_blank" rel="noopener">Заполнить заявку</a>
-              </div>
-              <div class="events__poster">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="./img/events/poster-mobile.webp 1x, ./img/events/poster-mobile@2x.webp 2x">
-                  <source type="image/webp" srcset="./img/events/poster.webp 1x, ./img/events/poster@2x.webp 2x">
-                  <!-- mobile: 1x - 290px; 2x - 580px; desktop: 1x - 660px; 2x - 1320px  -->
-                  <img srcset="
-                    ./img/events/poster-mobile.jpg 290w,
-                    ./img/events/poster-mobile@2x.jpg 580w,
-                    ./img/events/poster.jpgv 660w,
-                    ./img/events/poster@2x.jpg 1320w
-                  " sizes="
-                    (min-width: 1200px) 660px,
-                    ((min-width: 1200px) and (min-resolution: 2dppx)) 1320px,
-                    (max-width: 767px) 290px,
-                    ((max-width: 767px) and (min-resolution: 2dppx)) 580px
-                  " src="./img/events/poster.jpg" width="660" height="500" loading="lazy" alt="Участник соревнований перед стартом.">
-                </picture>
-              </div>
+          <div class="events__inner">
+            <div class="events__info">
+              <h2>Super Games</h2>
+              <p>Ежегодные соревнования по&nbsp;CrossFit</p>
+              <dl>
+                <div>
+                  <dt>Дата</dt>
+                  <dd>7 <span>марта 2019</span>
+                  </dd>
+                </div>
+                <div>
+                  <dt>Время</dt>
+                  <dd>12:00</dd>
+                </div>
+              </dl>
+              <a href="#" target="_blank" rel="noopener">Заполнить заявку</a>
+            </div>
+            <div class="events__poster">
+              <picture>
+                <source type="image/webp" srcset="
+                  ./img/events/poster-mobile.webp 290w,
+                  ./img/events/poster-mobile@2x.webp 580w,
+                  ./img/events/poster.webp 660w,
+                  ./img/events/poster@2x.webp 1320w
+                " sizes="
+                  (min-width: 1200px) 660px,
+                  ((min-width: 1200px) and (min-resolution: 2dppx)) 1320px,
+                  (max-width: 767px) 290px,
+                  ((max-width: 767px) and (min-resolution: 2dppx)) 580px">
+                <!-- mobile: 1x - 290px; 2x - 580px; desktop: 1x - 660px; 2x - 1320px  -->
+                <img srcset="
+                  ./img/events/poster-mobile.jpg 290w,
+                  ./img/events/poster-mobile@2x.jpg 580w,
+                  ./img/events/poster.jpg 660w,
+                  ./img/events/poster@2x.jpg 1320w
+                " sizes="
+                  (min-width: 1200px) 660px,
+                  ((min-width: 1200px) and (min-resolution: 2dppx)) 1320px,
+                  (max-width: 767px) 290px,
+                  ((max-width: 767px) and (min-resolution: 2dppx)) 580px
+                " src="./img/events/poster.jpg" width="660" height="500" loading="lazy" alt="Участник соревнований перед стартом.">
+              </picture>
             </div>
           </div>
         </section>
@@ -581,9 +633,20 @@
                 </div>
                 <div class="stocks__poster">
                   <picture>
-                    <source type="image/webp" media="(max-width: 767px)" srcset="./img/stock/poster-mobile.webp 1x, ./img/stock/poster-mobile@2x.webp 2x">
-                    <source type="image/webp" media="(max-width: 1023px)" srcset="./img/stock/poster-tablet.webp 1x, ./img/stock/poster-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="./img/stock/poster.webp 1x, ./img/stock/poster@2x.webp 2x">
+                    <source type="image/webp" srcset="
+                    ./img/stock/poster-mobile.webp 290w,
+                    ./img/stock/poster-mobile@2x.webp 580w,
+                    ./img/stock/poster-tablet.webp 399w,
+                    ./img/stock/poster-tablet@2x.webp 798w,
+                    ./img/stock/poster.webp 280w,
+                    ./img/stock/poster@2x.webp 560w
+                  " sizes="
+                    (min-width: 1200px) 280px,
+                    ((min-width: 1200px) and (min-resolution: 2dppx)) 560px,
+                    (min-width: 768px) 399px,
+                    ((min-width: 768px) and (min-resolution: 2dppx)) 798px,
+                    (max-width: 767px) 290px,
+                    ((max-width: 767px) and (min-resolution: 2dppx)) 580px">
                     <!-- mobile: 1x - 290px; 2x - 580px; tablet: 1x - 399px; 2x - 798px  desktop: 1x - 280px; 2x - 560px  -->
                     <img srcset="
                       ./img/stock/poster-mobile.jpg 290w,
@@ -689,7 +752,7 @@
           <section class="double-block__contacts contacts">
             <div class="contacts__inner">
               <h2>Контакты</h2>
-              <dl class="contacts__list contacts__list--left">
+              <dl class="contacts__list contacts__list--main">
                 <dt>Адрес:</dt>
                 <dd>
                   <a href="https://yandex.ru/maps/-/CCUV4PdF~A" target="_blank" rel="noopener">г. Омск, ул.&nbsp;60&nbsp;лет Октября, 7</a>
@@ -697,7 +760,7 @@
                 <dt>График работы:</dt>
                 <dd>Пн-Вс: с&nbsp;8:00 до&nbsp;22:00</dd>
               </dl>
-              <dl class="contacts__list contacts__list--right">
+              <dl class="contacts__list">
                 <dt>Телефон:</dt>
                 <dd>
                   <a href="tel:88005555555" aria-label="Позвонить нам">8-800-555-55-55</a>
