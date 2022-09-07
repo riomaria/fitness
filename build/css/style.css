@@ -1806,6 +1806,9 @@ button,
   list-style: none;
   max-width: 80px;
   max-height: 200px;
+  -webkit-transform: translateX(10px);
+  -ms-transform: translateX(10px);
+  transform: translateX(10px);
 }
 
 .header-social li {
@@ -1815,7 +1818,7 @@ button,
 
 .header-social a {
   display: block;
-  padding: 10px 0;
+  padding: 10px;
   text-decoration: none;
   -webkit-transition: fill 0.2s;
   -o-transition: fill 0.2s;
@@ -1841,7 +1844,9 @@ button,
 
 .header-social__item--special a {
   width: 11px;
-  padding-left: 2px;
+  -webkit-transform: translateX(2px);
+  -ms-transform: translateX(2px);
+  transform: translateX(2px);
 }
 
 .header-social__item--special svg {
@@ -2265,14 +2270,13 @@ button,
 }
 
 .abonement-card:hover,
-.abonement-card:focus {
+.abonement-card:focus-within {
   border: 7px solid;
   border-image-source: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
   border-image-slice: 1;
 }
 
-.abonement-card:hover a,
-.abonement-card:focus a {
+.abonement-card:hover a {
   -webkit-box-shadow: none;
   box-shadow: none;
   color: #ffffff;
@@ -3149,7 +3153,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 211px;
-  padding: 24px 28px 30px;
+  padding: 24px 28px 25px;
   border: 7px solid;
   border-image-source: linear-gradient(142.51deg, #d10a42 0%, #0041ca 87.33%);
   border-image-slice: 1;
@@ -3185,7 +3189,7 @@ button,
   display: block;
   margin: 0;
   margin-top: auto;
-  padding: 0;
+  padding: 5px 5px 5px 0;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
@@ -3194,16 +3198,37 @@ button,
   text-transform: uppercase;
   color: #1c3374;
   text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
 }
 
 .stocks__item a::after {
   position: absolute;
-  bottom: -2px;
+  bottom: 3px;
   left: 0;
-  width: 100%;
+  width: 97%;
   height: 1px;
   background-color: #1c3374;
   content: "";
+}
+
+.stocks__item a:hover,
+.stocks__item a:focus {
+  color: #334482;
+}
+
+.stocks__item a:hover::after,
+.stocks__item a:focus::after {
+  content: none;
+}
+
+.stocks__item a:active {
+  opacity: 0.5;
 }
 
 .stocks__item--special {
@@ -3218,6 +3243,10 @@ button,
   border: none;
 }
 
+.stocks__item--special:active {
+  opacity: 0.5;
+}
+
 .stocks__info {
   -webkit-box-flex: 1;
   -ms-flex: 1 1 50%;
@@ -3229,7 +3258,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 41px 45px 46px;
+  padding: 41px 45px 41px;
   background-color: #ed0233;
 }
 
@@ -3274,7 +3303,7 @@ button,
 }
 
 .stocks__info a::after {
-  bottom: -1px;
+  bottom: 4px;
   background-color: #ffffff;
 }
 
@@ -5404,7 +5433,7 @@ button,
     align-items: center;
     margin-bottom: 30px;
     padding-top: 34px;
-    padding-bottom: 42px;
+    padding-bottom: 37px;
   }
 
   .stocks__item h3 {
@@ -5419,6 +5448,7 @@ button,
   .stocks__item a {
     margin: 0 auto;
     margin-top: auto;
+    padding: 5px 1px;
   }
 
   .stocks__item--special {
@@ -5429,7 +5459,7 @@ button,
   }
 
   .stocks__item--special .stocks__info {
-    padding: 41px 15px 46px;
+    padding: 41px 15px 42px;
   }
 
   .stocks__info {

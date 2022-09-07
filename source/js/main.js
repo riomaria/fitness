@@ -67,22 +67,47 @@ window.addEventListener('DOMContentLoaded', () => {
     inputPhone.value = '';
   });
 
+  // Smooth function
 
-  // Main header contact
+  const initSmoothNavigation = (elem) => {
+    const blockId = elem.getAttribute('href');
+    document.querySelector('' + blockId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
+  // Smooth header button
 
   const headerButton = document.querySelector('.main-header__content a');
   const buttonAbonement = document.querySelectorAll('.abonement-tabs__button');
 
   headerButton.addEventListener('click', (evt) => {
     evt.preventDefault();
-    const blockId = headerButton.getAttribute('href');
-    document.querySelector('' + blockId).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
-    setTimeout(function () {
+    initSmoothNavigation(headerButton);
+    setTimeout(() => {
       buttonAbonement[0].focus();
     }, 700);
+  });
+
+  // Smooth footer navigation
+
+  const navigationItem = document.querySelectorAll('.main-footer__navigation a');
+
+  navigationItem.forEach((item) => {
+    item.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      initSmoothNavigation(item);
+    });
+  });
+
+  // Smooth footer logo
+
+  const footerLogo = document.querySelector('.main-footer__logo a');
+
+  footerLogo.addEventListener('click', (evt) => {
+    evt.preventDefault(evt);
+    initSmoothNavigation(footerLogo);
   });
 
   // Video iframe

@@ -30,7 +30,6 @@ class GraphTabs {
   }
 
   init() {
-    this.tabList.setAttribute('role', 'tablist');
 
     this.tabsBtns.forEach((el, i) => {
       el.setAttribute('role', 'tab');

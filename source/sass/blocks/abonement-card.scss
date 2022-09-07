@@ -12,7 +12,7 @@
   overflow: hidden;
 
   &:hover,
-  &:focus {
+  &:focus-within {
     border: 7px solid;
     border-image-source: $left-red-blue;
     border-image-slice: 1;
@@ -30,8 +30,8 @@
   }
 }
 
-.abonement-card:hover a,
-.abonement-card:focus a {
+
+.abonement-card:hover a {
   box-shadow: none;
   color: $color-default-white;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
