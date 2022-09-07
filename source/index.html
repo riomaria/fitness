@@ -45,10 +45,10 @@
           <div class="main-header__poster header-poster">
             <picture>
               <source type="image/webp" srcset="
-                ./img/hero/hero-tablet.webp 324w,
-                ./img/hero/hero-tablet@2x.webp 648w,
                 ./img/hero/hero-desk.webp 500w,
-                ./img/hero/hero-desk@2x.webp 1000w
+                ./img/hero/hero-desk@2x.webp 1000w,
+                ./img/hero/hero-tablet.webp 324w,
+                ./img/hero/hero-tablet@2x.webp 648w
               " sizes="
                 (min-width: 1200px) 500px,
                 ((min-width: 1200px) and (min-resolution: 2dppx)) 1000px,
@@ -56,10 +56,10 @@
                 ((min-width: 768px) and (min-resolution: 2dppx)) 648px">
               <!-- desktop: 1x - 500px; 2x - 1000px; tablet: 1x - 324px; 2x - 648px -->
               <img srcset="
-                ./img/hero/hero-tablet.jpg 324w,
-                ./img/hero/hero-tablet@2x.jpg 648w,
                 ./img/hero/hero-desk.jpg 500w,
-                ./img/hero/hero-desk@2x.jpg 1000w
+                ./img/hero/hero-desk@2x.jpg 1000w,
+                ./img/hero/hero-tablet.jpg 324w,
+                ./img/hero/hero-tablet@2x.jpg 648w
               " sizes="
                 (min-width: 1200px) 500px,
                 ((min-width: 1200px) and (min-resolution: 2dppx)) 1000px,
@@ -111,12 +111,12 @@
                 <div class="media__photo">
                   <picture>
                     <source type="image/webp" srcset="
-                      ./img/intro/photo-mobile.webp 320w,
-                      ./img/intro/photo-mobile@2x.webp 640w,
+                      ./img/intro/photo-desk.webp 660w,
+                      ./img/intro/photo-desk@2x.webp 1320w,
                       ./img/intro/photo-tablet.webp 678w,
                       ./img/intro/photo-tablet@2x.webp 1356w,
-                      ./img/intro/photo-desk.webp 660w,
-                      ./img/intro/photo-desk@2x.webp 1320w
+                      ./img/intro/photo-mobile.webp 320w,
+                      ./img/intro/photo-mobile@2x.webp 640w
                     " sizes="
                       (min-width: 1200px) 660px,
                       ((min-width: 1200px) and (min-resolution: 2dppx)) 1320px,
@@ -126,12 +126,12 @@
                       ((max-width: 767px) and (min-resolution: 2dppx)) 640px">
                     <!-- mobile: 1x - 320px; 2x - 640px; tablet: 1x - 678px; 2x - 1356px  desktop: 1x - 660px; 2x - 1320px  -->
                     <img srcset="
-                      ./img/intro/photo-mobile.jpg 320w,
-                      ./img/intro/photo-mobile@2x.jpg 640w,
+                      ./img/intro/photo-desk.jpg 660w,
+                      ./img/intro/photo-desk@2x.jpg 1320w,
                       ./img/intro/photo-tablet.jpg 678w,
                       ./img/intro/photo-tablet@2x.jpg 1356w,
-                      ./img/intro/photo-desk.jpg 660w,
-                      ./img/intro/photo-desk@2x.jpg 1320w
+                      ./img/intro/photo-mobile.jpg 320w,
+                      ./img/intro/photo-mobile@2x.jpg 640w
                     " sizes="
                       (min-width: 1200px) 660px,
                       ((min-width: 1200px) and (min-resolution: 2dppx)) 1320px,
@@ -147,10 +147,10 @@
                     <a href="https://www.youtube.com/watch?v=9TZXsZItgdw" target="_blank" rel="noopener">
                       <picture>
                         <source type="image/webp" srcset="
-                          ./img/intro/video-mobile.webp 320w,
-                          ./img/intro/video-mobile@2x.webp 640w,
                           ./img/intro/video-desk.webp 364w,
-                          ./img/intro/video-desk@2x.webp 728w
+                          ./img/intro/video-desk@2x.webp 728w,
+                          ./img/intro/video-mobile.webp 320w,
+                          ./img/intro/video-mobile@2x.webp 640w
                         " sizes="
                           (min-width: 768px) 364px,
                           ((min-width: 768px) and (min-resolution: 2dppx)) 728px,
@@ -158,10 +158,10 @@
                           ((max-width: 767px) and (min-resolution: 2dppx)) 640px">
                         <!-- mobile: 1x - 320px; 2x - 640px; tablet: 1x - 364px; 2x - 728px -->
                         <img srcset="
-                          ./img/intro/video-mobile.jpg 320w,
-                          ./img/intro/video-mobile@2x.jpg 640w,
                           ./img/intro/video-desk.jpg 364w,
-                          ./img/intro/video-desk@2x.jpg 728w
+                          ./img/intro/video-desk@2x.jpg 728w,
+                          ./img/intro/video-mobile.jpg 320w,
+                          ./img/intro/video-mobile@2x.jpg 640w
                         " sizes="
                           (min-width: 768px) 364px,
                           ((min-width: 768px) and (min-resolution: 2dppx)) 728px,
@@ -170,7 +170,7 @@
                         " src="./img/intro/video-desk.jpg" width="364" height="228" loading="lazy" alt="Видео-презентация тренажерного зала.">
                       </picture>
                     </a>
-                    <button type="button">
+                    <button type="button" aria-label="play">
                       <svg width="13" height="15" aria-hidden="true" focusable="false">
                         <use xlink:href="./img/sprite_auto.svg#icon-play"></use>
                       </svg>
@@ -186,7 +186,7 @@
             <h2>Абонементы</h2>
             <ul class="abonement-tabs__controls" data-nojs="no-js">
               <li>
-                <button class="abonement-tabs__button" type="button">1 месяц</button>
+                <button class="abonement-tabs__button" type="button" tabindex="-1">1 месяц</button>
               </li>
               <li>
                 <button class="abonement-tabs__button" type="button">6 месяцев</button>
@@ -208,7 +208,7 @@
                           <use xlink:href="./img/sprite_auto.svg#icon-currency"></use>
                         </svg>
                       </div>
-                      <a href="#" target="_blank" rel="noopener">Купить абонемент</a>
+                      <a class="abonement-card__button" href="#" target="_blank" rel="noopener">Купить абонемент</a>
                     </article>
                   </li>
                   <li>
@@ -330,10 +330,10 @@
           <div class="abonement-tabs__decor">
             <picture>
               <source type="image/webp" srcset="
-                ./img/tabs/decor-tablet.webp 347w,
-                ./img/tabs/decor-tablet@2x.webp 694w,
                 ./img/tabs/decor.webp 287w,
-                ./img/tabs/decor@2x.webp 574w
+                ./img/tabs/decor@2x.webp 574w,
+                ./img/tabs/decor-tablet.webp 347w,
+                ./img/tabs/decor-tablet@2x.webp 694w
               " sizes="
                 (min-width: 1200px) 287px,
                 ((min-width: 1200px) and (min-resolution: 2dppx)) 574px,
@@ -341,10 +341,10 @@
                 ((min-width: 768px) and (min-resolution: 2dppx)) 694px">
               <!-- tablet: 1x - 347px; 2x - 694px  desktop: 1x - 287px; 2x - 574px  -->
               <img srcset="
-                ./img/tabs/decor-tablet.png 347w,
-                ./img/tabs/decor-tablet@2x.png 694w,
                 ./img/tabs/decor.png 287w,
-                ./img/tabs/decor@2x.png 574w
+                ./img/tabs/decor@2x.png 574w,
+                ./img/tabs/decor-tablet.png 347w,
+                ./img/tabs/decor-tablet@2x.png 694w
               " sizes="
                 (min-width: 1200px) 287px,
                 ((min-width: 1200px) and (min-resolution: 2dppx)) 574px,
@@ -375,10 +375,10 @@
             <div class="events__poster">
               <picture>
                 <source type="image/webp" srcset="
-                  ./img/events/poster-mobile.webp 290w,
-                  ./img/events/poster-mobile@2x.webp 580w,
                   ./img/events/poster.webp 660w,
-                  ./img/events/poster@2x.webp 1320w
+                  ./img/events/poster@2x.webp 1320w,
+                  ./img/events/poster-mobile.webp 290w,
+                  ./img/events/poster-mobile@2x.webp 580w
                 " sizes="
                   (min-width: 1200px) 660px,
                   ((min-width: 1200px) and (min-resolution: 2dppx)) 1320px,
@@ -386,10 +386,10 @@
                   ((max-width: 767px) and (min-resolution: 2dppx)) 580px">
                 <!-- mobile: 1x - 290px; 2x - 580px; desktop: 1x - 660px; 2x - 1320px  -->
                 <img srcset="
-                  ./img/events/poster-mobile.jpg 290w,
-                  ./img/events/poster-mobile@2x.jpg 580w,
                   ./img/events/poster.jpg 660w,
-                  ./img/events/poster@2x.jpg 1320w
+                  ./img/events/poster@2x.jpg 1320w,
+                  ./img/events/poster-mobile.jpg 290w,
+                  ./img/events/poster-mobile@2x.jpg 580w
                 " sizes="
                   (min-width: 1200px) 660px,
                   ((min-width: 1200px) and (min-resolution: 2dppx)) 1320px,
@@ -634,12 +634,12 @@
                 <div class="stocks__poster">
                   <picture>
                     <source type="image/webp" srcset="
-                    ./img/stock/poster-mobile.webp 290w,
-                    ./img/stock/poster-mobile@2x.webp 580w,
+                    ./img/stock/poster.webp 280w,
+                    ./img/stock/poster@2x.webp 560w,
                     ./img/stock/poster-tablet.webp 399w,
                     ./img/stock/poster-tablet@2x.webp 798w,
-                    ./img/stock/poster.webp 280w,
-                    ./img/stock/poster@2x.webp 560w
+                    ./img/stock/poster-mobile.webp 290w,
+                    ./img/stock/poster-mobile@2x.webp 580w
                   " sizes="
                     (min-width: 1200px) 280px,
                     ((min-width: 1200px) and (min-resolution: 2dppx)) 560px,
@@ -649,12 +649,12 @@
                     ((max-width: 767px) and (min-resolution: 2dppx)) 580px">
                     <!-- mobile: 1x - 290px; 2x - 580px; tablet: 1x - 399px; 2x - 798px  desktop: 1x - 280px; 2x - 560px  -->
                     <img srcset="
-                      ./img/stock/poster-mobile.jpg 290w,
-                      ./img/stock/poster-mobile@2x.jpg 580w,
+                      ./img/stock/poster.jpg 280w,
+                      ./img/stock/poster@2x.jpg 560w,
                       ./img/stock/poster-tablet.jpg 399w,
                       ./img/stock/poster-tablet@2x.jpg 798w,
-                      ./img/stock/poster.jpg 280w,
-                      ./img/stock/poster@2x.jpg 560w
+                      ./img/stock/poster-mobile.jpg 290w,
+                      ./img/stock/poster-mobile@2x.jpg 580w
                     " sizes="
                       (min-width: 1200px) 280px,
                       ((min-width: 1200px) and (min-resolution: 2dppx)) 560px,
