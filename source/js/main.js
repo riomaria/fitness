@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+// import {initModals} from './modules/modals/init-modals';
+import {initCoachesSlider, initFeedbackSlider} from './vendor/init-slider';
 
 // ---------------------------------
 
@@ -9,6 +10,119 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  initCoachesSlider();
+  initFeedbackSlider();
+
+  // Tabs abonements no-js
+
+  const initAbonements = () => {
+    const controlTabs = document.querySelector('.abonement-tabs__controls');
+    const panelTabs = document.querySelector('.abonement-tabs__content');
+
+    controlTabs.removeAttribute('data-nojs');
+    panelTabs.removeAttribute('data-nojs');
+  };
+
+  initAbonements();
+
+  // Tabs panel height
+
+  const initTabsPanel = () => {
+    const tabsControl = document.querySelector('.abonement-tabs__controls');
+    const tabsButton = document.querySelector('.abonement-tabs__button');
+    const mediumheight = (tabsButton.offsetHeight * 2) - 20;
+
+    if (tabsControl.offsetHeight > mediumheight) {
+      tabsControl.setAttribute('data-height', 'is-high');
+    }
+  };
+  initTabsPanel();
+
+  // Events title font
+
+  const fontTitle = document.querySelector('.events__info h2');
+  const dataTitle = fontTitle.textContent;
+  const arrayTitle = dataTitle.split(' ');
+
+  arrayTitle.forEach((item) => {
+    if (item.length > 6) {
+      fontTitle.style.fontSize = 50 + 'px';
+      fontTitle.style.lineHeight = 52 + 'px';
+    }
+  });
+
+  // Local storage
+
+  const submitForm = document.querySelector('.registration__form');
+  const userName = submitForm .querySelector('#user-name');
+  const inputPhone = submitForm .querySelector('#user-phone');
+
+  submitForm.addEventListener('submit', (evt) => {
+    evt.preventDefault();
+
+    localStorage.setItem('userName', userName.value);
+    localStorage.setItem('userPhone', inputPhone.value);
+
+    userName.value = '';
+    inputPhone.value = '';
+  });
+
+  // Smooth navigation
+
+  const anchorMenu = document.querySelectorAll('a[href^="#"]');
+
+  anchorMenu.forEach((item) => {
+
+    item.addEventListener('click', (evt) => {
+      evt.preventDefault();
+
+      const blockId = item.getAttribute('href');
+      document.querySelector('' + blockId).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    });
+  });
+
+  // Video iframe
+
+  const setupVideo = (video) => {
+    const link = video.querySelector('a');
+    const media = video.querySelector('img');
+    const button = video.querySelector('button');
+    const wrapper = video.querySelector('.media__wrapper');
+
+    video.addEventListener('click', () => {
+      const iframe = createIframe();
+      link.remove();
+      button.remove();
+      media.remove();
+      wrapper.appendChild(iframe);
+    });
+    video.setAttribute('data-video', 'is-enabled');
+    link.removeAttribute('href');
+  };
+
+  const createIframe = () => {
+    const iframe = document.createElement('iframe');
+
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('title', 'YouTube player');
+    iframe.style.width = '364';
+    iframe.style.height = '228';
+    iframe.setAttribute('src', 'https://www.youtube.com/embed/9TZXsZItgdw?rel=0&showinfo=0&autoplay=1');
+
+    return iframe;
+  };
+
+  const videoIntro = document.querySelector('.media__video');
+
+  setupVideo(videoIntro);
+
+  window.addEventListener('resize', () => {
+    initTabsPanel();
+  });
+
 
   // Modules
   // ---------------------------------
@@ -16,7 +130,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
+    // initModals();
   });
 });
 

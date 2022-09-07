@@ -1,0 +1,202 @@
+.media__inner {
+  position: relative;
+  padding-left: 63px;
+
+  @include vp-1199 {
+    padding-left: 0;
+  }
+}
+
+.media__photo {
+  position: relative;
+  min-height: 401px;
+  padding: 0 0 58% 0;
+  overflow: hidden;
+
+  @include vp-1199 {
+    min-height: 345px;
+    max-height: 401px;
+    padding: 0;
+  }
+
+  @include vp-767 {
+    min-height: 313px;
+    margin-bottom: 40px;
+  }
+}
+
+.media__photo img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color: $color-dark-grey;
+}
+
+.media__video {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: translateY(50%);
+
+  @include vp-1199 {
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%);
+  }
+
+  @include vp-767 {
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+}
+
+.media__video:hover button,
+.media__video button:focus {
+  background: $color-torch-red;
+}
+
+.media__video:hover button::after,
+.media__video button:active {
+  opacity: 0.6;
+}
+
+.media__video:active button,
+.media__video button:active {
+  opacity: 0.8;
+}
+
+.media__wrapper {
+  position: relative;
+  width: 364px;
+  height: 228px;
+  cursor: pointer;
+
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    width: 320px;
+    height: 167px;
+    max-height: auto;
+    margin: 0 auto;
+  }
+}
+
+.media__video a {
+  display: block;
+  text-decoration: none;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color-dark-cerulean, 0.5);
+    content: "";
+  }
+}
+
+.media__video img,
+.media__video iframe {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color: $color-dark-grey;
+  cursor: pointer;
+}
+
+.media__video iframe {
+  border: none;
+}
+
+.media__video button {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 72px;
+  height: 72px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: $left-blue-red;
+  user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+
+  &::after {
+    @include border-gradient($color-torch-red, $color-cobalt, 1px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 96px;
+    height: 96px;
+    border-radius: 100%;
+    opacity: 0.2;
+    content: "";
+  }
+
+  @include vp-1199 {
+    width: 54px;
+    height: 54px;
+    transform: translateX(-52%) translateY(-53%);
+
+    &::after {
+      width: 69px;
+      height: 69px;
+    }
+  }
+
+  @include vp-767 {
+    width: 53px;
+    height: 53px;
+    transform: translateX(-48%) translateY(-53%);
+
+    &::after {
+      width: 68px;
+      height: 68px;
+    }
+  }
+}
+
+.media__video[data-video="is-enabled"] button {
+  display: block;
+}
+
+.media__video svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 16px;
+  height: 16px;
+  transform: translateX(-33%) translateY(-50%);
+  fill: $color-default-white;
+
+  @include vp-1199 {
+    width: 10px;
+    height: 10px;
+    transform: translateX(-48%) translateY(-50%);
+  }
+
+  @include vp-767 {
+    transform: translateX(-50%) translateY(-40%);
+  }
+}

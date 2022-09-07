@@ -1,0 +1,116 @@
+.intro {
+  padding-top: 120px;
+  padding-bottom: 235px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 184px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+}
+
+.intro__inner {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1272px;
+  margin: 0 auto;
+  padding: 0 56px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    display: block;
+    padding: 0;
+  }
+}
+
+.intro__content {
+  flex: 1 1 37.6%;
+  margin: 0 auto;
+  padding-top: 49px;
+  padding-left: 60px;
+  padding-right: 25px;
+
+  @include vp-1199 {
+    flex: 1 0 auto;
+    max-width: 85%;
+    padding: 0;
+    padding-bottom: 35px;
+    text-align: center;
+  }
+
+  @include vp-767 {
+    min-width: 320px;
+    max-width: 100%;
+    padding: 0 15px;
+    padding-bottom: 25px;
+    text-align: left;
+  }
+}
+
+.intro__content h2 {
+  @include font-title();
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+
+  @include vp-1199 {
+    margin-bottom: 7px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 4px;
+    max-width: 90%;
+  }
+}
+
+.intro__content h3 {
+  display: block;
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  font-weight: $fw-normal;
+  font-size: $fz-small;
+  line-height: $lh-pre-modarate;
+
+  @include vp-1199 {
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    max-width: 99%;
+    margin-bottom: 25px;
+  }
+}
+
+.intro p {
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+  font-family: $ff-roboto;
+  font-weight: $fw-light;
+  line-height: $lh-normal;
+
+  @include vp-767 {
+    max-width: 99%;
+  }
+}
+
+.intro__add {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.intro__media {
+  flex: 1 1 62.4%;
+}

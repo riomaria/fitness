@@ -1,0 +1,249 @@
+.stocks {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background-color: $color-default-white;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  @include vp-767 {
+    padding-top: 70px;
+    padding-bottom: 25px;
+  }
+}
+
+.stocks h2 {
+  @include font-title();
+  max-width: 80%;
+  margin: 0 auto 50px;
+  margin-bottom: 50px;
+  padding: 0;
+  text-align: center;
+
+  @include vp-1199 {
+    margin-bottom: 39px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 41px;
+  }
+}
+
+.stocks__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1199 {
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
+
+.stocks__item {
+  justify-content: stretch;
+  display: flex;
+  flex-direction: column;
+  min-height: 211px;
+  padding: 24px 28px 30px;
+  border: 7px solid;
+  border-image-source: $left-red-blue;
+  border-image-slice: 1;
+
+  @include vp-767 {
+    align-items: center;
+    margin-bottom: 30px;
+    padding-top: 34px;
+    padding-bottom: 42px;
+  }
+}
+
+.stocks__item h3 {
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-weight: $fw-normal;
+  font-size: $fz-default;
+  line-height: $lh-default;
+  color: $color-resolution-blue;
+
+  @include vp-767 {
+    text-align: center;
+  }
+}
+
+.stocks__item p {
+  order: -1;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  font-weight: $fw-bold;
+  font-size: $fz-super-normal;
+  line-height: $lh-super-normal;
+  color: $color-resolution-blue;
+
+  @include vp-767 {
+    margin-bottom: 12px;
+    text-align: center;
+  }
+}
+
+.stocks__item a {
+  align-self: flex-start;
+  position: relative;
+  display: block;
+  margin: 0;
+  margin-top: auto;
+  padding: 0;
+
+  font-weight: $fw-bold;
+  font-size: $fz-little;
+  line-height: $lh-little;
+  font-family: $ff-roboto;
+  letter-spacing: $ls-interium;
+  text-transform: uppercase;
+  color: $color-resolution-blue;
+  text-decoration: none;
+
+  &::after {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-resolution-blue;
+    content: "";
+  }
+
+  @include vp-767 {
+    margin: 0 auto;
+    margin-top: auto;
+  }
+}
+
+.stocks__item--special {
+  grid-row: span 2;
+  flex-direction: row;
+  min-height: 462px;
+  padding: 0;
+  border: none;
+
+  @include vp-1199 {
+    grid-column: span 2;
+  }
+
+  @include vp-767 {
+    flex-wrap: wrap;
+    min-height: 300px;
+    padding: 0;
+  }
+}
+
+.stocks__item--special .stocks__info {
+  @include vp-767 {
+    padding: 41px 15px 46px;
+  }
+}
+
+.stocks__info {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  padding: 41px 45px 46px;
+  background-color: $color-torch-red;
+
+  @include vp-1199 {
+    flex: 1 1 40%;
+    min-width: 279px;
+  }
+
+  @include vp-767 {
+    flex: 1 1 55%;
+    align-items: center;
+    min-width: 250px;
+    min-height: 300px;
+  }
+}
+
+.stocks__info h3 {
+  font-size: $fz-small;
+  line-height: $lh-past-normal;
+  color: $color-default-white;
+}
+
+.stocks__info p {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 19px;
+  font-weight: $fw-bold;
+  font-size: $fz-large;
+  line-height: $lh-pre-large;
+  color: $color-default-white;
+}
+
+.stocks__info span {
+  order: -1;
+  display: block;
+  margin-top: 2px;
+  font-weight: $fw-bold;
+  font-size: $fz-pre-modarate;
+  line-height: $lh-pre-modarate;
+  text-transform: capitalize;
+
+  @include vp-767 {
+    margin-top: 3px;
+  }
+}
+
+.stocks__info a {
+  font-size: $fz-super-little;
+  line-height: $lh-super-little;
+  letter-spacing: $ls-interium;
+  color: $color-default-white;
+
+  &::after {
+    bottom: -1px;
+    background-color: $color-default-white;
+  }
+}
+
+.stocks__poster {
+  flex: 1 1 50%;
+  position: relative;
+
+  @include vp-1199 {
+    flex: 1 1 60%;
+  }
+
+  @include vp-767 {
+    flex: 1 1 30%;
+    min-width: 250px;
+    min-height: 300px;
+  }
+}
+
+.stocks__poster img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  background-color: $color-dark-cerulean;
+}
