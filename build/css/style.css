@@ -2388,6 +2388,11 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
+  min-width: 250px;
+  max-width: 1272px;
+  margin: 0 auto;
+  padding: 0 56px;
 }
 
 .events__info {
@@ -3746,6 +3751,12 @@ button,
   text-decoration: none;
 }
 
+.contacts__item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
+}
+
 .contacts__list dt {
   margin: 0;
   margin-bottom: 3px;
@@ -3782,12 +3793,12 @@ button,
   opacity: 0.5;
 }
 
-.contacts__list--left {
+.contacts__list--main {
   position: relative;
   padding-left: 4px;
 }
 
-.contacts__list--left::after {
+.contacts__list--main::after {
   position: absolute;
   top: 6px;
   right: 0;
@@ -4295,6 +4306,10 @@ button,
     padding-bottom: 50px;
   }
 
+  .events__inner {
+    padding: 0 45px;
+  }
+
   .events__info {
     max-width: 292px;
     min-height: 292px;
@@ -4759,7 +4774,7 @@ button,
     line-height: 27px;
   }
 
-  .contacts__list--left {
+  .contacts__list--main {
     padding: 0;
   }
 
@@ -5092,10 +5107,13 @@ button,
 
   .events {
     padding-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-bottom: 35px;
   }
 
   .events__inner {
+    padding: 0;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -5104,8 +5122,9 @@ button,
 
   .events__info {
     -webkit-box-flex: 0;
-    -ms-flex: 0 1 30%;
-    flex: 0 1 30%;
+    -ms-flex: 0 1 40%;
+    flex: 0 1 40%;
+    max-width: 500px;
     min-width: 290px;
     padding-left: 44px;
     padding-right: 44px;
@@ -5122,9 +5141,9 @@ button,
     -ms-grid-row-align: stretch;
     align-self: stretch;
     -webkit-box-flex: 1;
-    -ms-flex: 1 1 30%;
-    flex: 1 1 30%;
-    min-width: 250px;
+    -ms-flex: 1 1 35%;
+    flex: 1 1 35%;
+    min-width: 270px;
     min-height: 292px;
   }
 
@@ -5535,6 +5554,7 @@ button,
   }
 
   .registration__inner {
+    max-width: 100%;
     padding: 0 15px;
   }
 
@@ -5610,7 +5630,7 @@ button,
     margin-bottom: 34px;
   }
 
-  .contacts__list--left::after {
+  .contacts__list--main::after {
     content: none;
   }
 

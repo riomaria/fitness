@@ -67,21 +67,22 @@ window.addEventListener('DOMContentLoaded', () => {
     inputPhone.value = '';
   });
 
-  // Smooth navigation
 
-  const anchorMenu = document.querySelectorAll('a[href^="#"]');
+  // Main header contact
 
-  anchorMenu.forEach((item) => {
+  const headerButton = document.querySelector('.main-header__content a');
+  const buttonAbonement = document.querySelectorAll('.abonement-tabs__button');
 
-    item.addEventListener('click', (evt) => {
-      evt.preventDefault();
-
-      const blockId = item.getAttribute('href');
-      document.querySelector('' + blockId).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+  headerButton.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    const blockId = headerButton.getAttribute('href');
+    document.querySelector('' + blockId).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
     });
+    setTimeout(function () {
+      buttonAbonement[0].focus();
+    }, 700);
   });
 
   // Video iframe
