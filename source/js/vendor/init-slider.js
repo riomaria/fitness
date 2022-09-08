@@ -30,8 +30,8 @@ const initCoachesSlider = () => {
     },
 
     navigation: {
-      nextEl: '.coaches__button--prev',
-      prevEl: '.coaches__button--next',
+      nextEl: '.coaches__button--next',
+      prevEl: '.coaches__button--prev',
     },
   });
 

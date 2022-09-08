@@ -1,18 +1,18 @@
 .contacts {
   padding-top: 70px;
   padding-left: 120px;
-  padding-bottom: 47px;
+  padding-bottom: 45px;
   background-color: $color-default-white;
 
   @include vp-1199 {
     padding-top: 71px;
-    padding-bottom: 27px;
+    padding-bottom: 25px;
   }
 
   @include vp-767 {
     padding: 0;
     padding-top: 70px;
-    padding-bottom: 43px;
+    padding-bottom: 42px;
   }
 }
 
@@ -82,7 +82,7 @@
   line-height: $lh-normal;
 
   @include vp-1199 {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     font-size: $fz-super-small;
     line-height: $lh-past-modarate;
   }
@@ -103,7 +103,8 @@
 }
 
 .contacts__list a {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   font-family: $ff-roboto;
   font-size: $fz-super-little;
   line-height: $lh-super-small;

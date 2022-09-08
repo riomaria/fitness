@@ -1783,7 +1783,7 @@ button,
   object-fit: cover;
   -o-object-position: top;
   object-position: top;
-  background-color: #afafaf;
+  background-color: #103aae;
 }
 
 .header-social {
@@ -3538,7 +3538,7 @@ button,
 
 .registration {
   padding-top: 70px;
-  padding-bottom: 47px;
+  padding-bottom: 45px;
   background-color: #102654;
 }
 
@@ -3733,7 +3733,7 @@ button,
 .contacts {
   padding-top: 70px;
   padding-left: 120px;
-  padding-bottom: 47px;
+  padding-bottom: 45px;
   background-color: #ffffff;
 }
 
@@ -3805,7 +3805,8 @@ button,
 }
 
 .contacts__list a {
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -3869,6 +3870,10 @@ button,
 .main-footer__logo a:hover svg,
 .main-footer__logo a:focus svg {
   fill: #ed0233;
+}
+
+.main-footer__logo a:active svg {
+  opacity: 0.5;
 }
 
 .main-footer__logo svg {
@@ -3952,6 +3957,7 @@ button,
   margin: 0;
   margin-right: -11px;
   padding: 0;
+  padding-top: 2px;
   list-style: none;
 }
 
@@ -4758,7 +4764,7 @@ button,
 
   .contacts {
     padding-top: 71px;
-    padding-bottom: 27px;
+    padding-bottom: 25px;
   }
 
   .contacts__inner {
@@ -4787,7 +4793,7 @@ button,
   }
 
   .contacts__list dt {
-    margin-bottom: 5px;
+    margin-bottom: 4px;
     font-size: 20px;
     line-height: 30px;
   }
@@ -5633,7 +5639,7 @@ button,
   .contacts {
     padding: 0;
     padding-top: 70px;
-    padding-bottom: 43px;
+    padding-bottom: 42px;
   }
 
   .contacts__inner {
@@ -5693,6 +5699,10 @@ button,
     padding-top: 8px;
   }
 
+  .main-footer__logo a {
+    margin-bottom: 10px;
+  }
+
   .main-footer__logo svg {
     width: 67px;
     height: 16px;
@@ -5749,7 +5759,7 @@ button,
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
     grid-row: 2/3;
-    padding-top: 10px;
+    padding-top: 40px;
   }
 
   .footer-navigation__list--right {
