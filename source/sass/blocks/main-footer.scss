@@ -48,11 +48,19 @@
   display: block;
   text-decoration: none;
   cursor: pointer;
+
+  @include vp-767 {
+    margin-bottom: 10px;
+  }
 }
 
 .main-footer__logo a:hover svg,
 .main-footer__logo a:focus svg {
   fill: $color-torch-red;
+}
+
+.main-footer__logo a:active svg {
+  opacity: 0.5;
 }
 
 .main-footer__logo svg {
