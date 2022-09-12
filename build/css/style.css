@@ -1783,7 +1783,7 @@ button,
   object-fit: cover;
   -o-object-position: top;
   object-position: top;
-  background-color: #103aae;
+  background-color: #030a1a;
 }
 
 .header-social {
@@ -3841,7 +3841,7 @@ button,
 .main-footer {
   min-height: 108px;
   padding-top: 41px;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
   background-color: #030a1a;
 }
 
@@ -3883,11 +3883,7 @@ button,
   fill: #ffffff;
 }
 
-.footer-social {
-  margin-top: -1px;
-}
-
-.footer-navigation {
+.main-footer__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3897,33 +3893,18 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   max-width: 560px;
-  padding-left: 9px;
-}
-
-.footer-navigation__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   margin: 0;
   padding: 0;
+  padding-left: 9px;
   list-style: none;
 }
 
-.footer-navigation__list--right {
-  padding-left: 2px;
-}
-
-.footer-navigation__list li {
+.main-footer__list li {
   margin-right: 40px;
   margin-bottom: 5px;
 }
 
-.footer-navigation__list a {
+.main-footer__list a {
   display: block;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -3935,13 +3916,17 @@ button,
   cursor: pointer;
 }
 
-.footer-navigation__list a:hover,
-.footer-navigation__list a:focus {
+.main-footer__list a:hover,
+.main-footer__list a:focus {
   color: #ed0233;
 }
 
-.footer-navigation__list a:active {
+.main-footer__list a:active {
   opacity: 0.5;
+}
+
+.main-footer__social {
+  margin-top: -1px;
 }
 
 .footer-social__list {
@@ -4109,6 +4094,7 @@ button,
   }
 
   .header-contacts a {
+    margin-left: 15px;
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.02em;
@@ -4827,18 +4813,18 @@ button,
     height: 19px;
   }
 
-  .footer-social {
-    margin: 0;
-  }
-
-  .footer-navigation {
+  .main-footer__list {
     max-width: 65%;
     margin-right: -30px;
     padding: 0;
   }
 
-  .footer-navigation__list li {
+  .main-footer__list li {
     margin-right: 30px;
+  }
+
+  .main-footer__social {
+    margin: 0;
   }
 
   .footer-social__list {
@@ -5461,6 +5447,9 @@ button,
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     min-height: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 0;
   }
 
@@ -5484,10 +5473,12 @@ button,
   }
 
   .stocks__poster {
+    position: relative;
     -webkit-box-flex: 1;
     -ms-flex: 1 1 30%;
     flex: 1 1 30%;
-    min-width: 250px;
+    width: 100%;
+    min-width: 150px;
     min-height: 300px;
   }
 
@@ -5671,31 +5662,25 @@ button,
   }
 
   .main-footer {
-    padding-top: 43px;
+    padding-top: 45px;
   }
 
   .main-footer__inner {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: -webkit-min-content 1fr -webkit-min-content;
-    -ms-grid-rows: min-content 1fr min-content;
-    grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
-    grid-template-rows: min-content 1fr min-content;
-    -webkit-column-gap: 8px;
-    -moz-column-gap: 8px;
-    column-gap: 8px;
-    row-gap: 5px;
+    position: relative;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
   }
 
   .main-footer__logo {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 1;
-    grid-row: 1/2;
+    position: absolute;
+    top: -3px;
+    left: 15px;
+    z-index: 2;
     padding-top: 8px;
   }
 
@@ -5708,76 +5693,32 @@ button,
     height: 16px;
   }
 
-  .main-footer__navigation {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1/3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1/3;
-  }
-
-  .footer-social {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-column: 1/3;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    grid-row: 3/4;
-  }
-
-  .footer-navigation {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: (-webkit-min-content)[3];
-    -ms-grid-rows: (min-content)[3];
-    grid-template-rows: repeat(3, -webkit-min-content);
-    grid-template-rows: repeat(3, min-content);
-    -webkit-column-gap: 10px;
-    -moz-column-gap: 10px;
-    column-gap: 10px;
+  .main-footer__list {
     max-width: 100%;
     margin: 0;
+    margin-bottom: 17px;
+    display: block;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
   }
 
-  .footer-navigation__list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-pack: stretch;
-    -ms-flex-pack: stretch;
-    justify-content: stretch;
-  }
-
-  .footer-navigation__list--left {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    grid-row: 2/3;
-    padding-top: 40px;
-  }
-
-  .footer-navigation__list--right {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    grid-row: 1/3;
-    padding-left: 10px;
-  }
-
-  .footer-navigation__list li {
+  .main-footer__list li {
     margin: 0;
-    margin-bottom: 13px;
+    margin-bottom: 18px;
   }
 
-  .footer-navigation__list a {
+  .main-footer__list li:first-of-type {
+    margin-top: 42px;
+  }
+
+  .main-footer__list a {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 1px 2px 2px 0;
     font-size: 16px;
     line-height: 18px;
   }
@@ -5786,12 +5727,15 @@ button,
     max-width: 250px;
     margin: 0;
     padding: 0;
-    padding-top: 12px;
     -webkit-transform: none;
     -ms-transform: none;
     transform: none;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
+  }
+
+  .footer-social__item a {
+    padding-top: 7px;
   }
 }

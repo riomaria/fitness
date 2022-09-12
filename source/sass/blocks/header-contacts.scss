@@ -42,6 +42,7 @@
   }
 
   @include vp-1199 {
+    margin-left: 15px;
     font-size: $fz-normal;
     line-height: $lh-normal;
     letter-spacing: $ls-light;
